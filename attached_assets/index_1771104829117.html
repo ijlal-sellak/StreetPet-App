@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetPet - Pet Adoption Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-paw"></i> StreetPet</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#pets">Available Pets</a>
+            <a href="#adopt">Adoption Process</a>
+            <a href="#success">Success Stories</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+<a href="login.html" class="login-button">Login</a>
+<a href="register.html" class="register-button">Register</a>
+        </div>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Pet Companion</h1>
+            <p>Join us in our mission to find loving homes for street pets</p>
+            <div class="hero-buttons">
+                <button class="cta-button">View Available Pets</button>
+                <button class="secondary-button">Donate Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat">
+                <i class="fas fa-home"></i>
+                <h3>500+</h3>
+                <p>Pets Adopted</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-heart"></i>
+                <h3>1000+</h3>
+                <p>Lives Saved</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-users"></i>
+                <h3>200+</h3>
+                <p>Volunteers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Pets Section -->
+    <section id="pets" class="pets-section">
+        <h2>Available Pets</h2>
+        <div class="pet-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Dogs</button>
+            <button class="filter-btn">Cats</button>
+            <button class="filter-btn">Others</button>
+        </div>
+        <div class="pets-grid">
+            <!-- Pet cards will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Adoption Process Section -->
+    <section id="adopt" class="adoption-process">
+        <h2>Adoption Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <i class="fas fa-search"></i>
+                <h3>Find a Pet</h3>
+                <p>Browse through our available pets</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-file-alt"></i>
+                <h3>Submit Application</h3>
+                <p>Fill out our adoption form</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-home"></i>
+                <h3>Home Visit</h3>
+                <p>We'll visit to ensure a good match</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-heart"></i>
+                <h3>Adoption</h3>
+                <p>Welcome your new family member</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="success" class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="stories-grid">
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1548535537-3cfad041685c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Happy Pet">
+                <div class="story-content">
+                    <h3>Max's Journey</h3>
+                    <p>"Max was found on the streets, but now he's living his best life with his new family!"</p>
+                    <span class="story-author">- Sarah & Family</span>
+                </div>
+            </div>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Happy Pet">
+                <div class="story-content">
+                    <h3>Luna's New Home</h3>
+                    <p>"Luna has brought so much joy to our lives. Thank you StreetPet!"</p>
+                    <span class="story-author">- Michael & Family</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>About StreetPet</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>StreetPet is dedicated to rescuing and finding loving homes for street animals. Our mission is to provide a second chance for these wonderful creatures.</p>
+                <p>We believe every pet deserves a loving home and proper care. Join us in making a difference!</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="StreetPet Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Pet Street, Animal City</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 234 567 890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@streetpet.com</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2><i class="fas fa-paw"></i> StreetPet</h2>
+                <p>Making the world a better place for pets</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#pets">Available Pets</a>
+                <a href="#adopt">Adoption Process</a>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StreetPet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
