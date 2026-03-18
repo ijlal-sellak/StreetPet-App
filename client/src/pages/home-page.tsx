@@ -15,11 +15,11 @@ import {
 } from "react-icons/fa";
 
 export default function HomePage() {
-  const { data: pets } = usePets();
+  const { data: pets = [], isLoading: petsLoading } = usePets();
   const [filter, setFilter] = useState<"all" | "dog" | "cat" | "other">("all");
 
-  const filteredPets = filter === "all" 
-    ? pets 
+  const filteredPets = filter === "all"
+    ? pets
     : pets.filter(p => p.type === filter);
 
   const containerVariants = {
@@ -182,19 +182,29 @@ export default function HomePage() {
           </div>
 
           {/* Pet Grid */}
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredPets.map((pet) => (
-              <motion.div key={pet.id} variants={itemVariants}>
-                <PetCard pet={pet} />
-              </motion.div>
-            ))}
-          </motion.div>
+          {petsLoading ? (
+            <div className="flex justify-center items-center py-20">
+              <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : filteredPets.length === 0 ? (
+            <div className="text-center py-20 text-gray-400 text-lg">
+              No pets found in this category.
+            </div>
+          ) : (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {filteredPets.map((pet) => (
+                <motion.div key={pet.id} variants={itemVariants}>
+                  <PetCard pet={pet} />
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
 
           <div className="text-center mt-12">
             <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-full px-8 py-6 text-lg">
