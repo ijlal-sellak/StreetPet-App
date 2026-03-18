@@ -11,8 +11,14 @@ export interface IStorage {
 
   getPets(): Promise<Pet[]>;
   getPet(id: number): Promise<Pet | undefined>;
+  createPet(data: Omit<Pet, "id" | "isAdopted">): Promise<Pet>;
+  updatePet(id: number, data: Partial<Pet>): Promise<Pet>;
+  deletePet(id: number): Promise<void>;
+
   createAdoption(userId: number, data: InsertAdoption): Promise<Adoption>;
   getAdoptionsByUser(userId: number): Promise<Adoption[]>;
+  getAllAdoptions(): Promise<(Adoption & { username: string })[]>;
+  updateAdoptionStatus(id: number, status: string): Promise<Adoption>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -50,6 +56,21 @@ export class DatabaseStorage implements IStorage {
     return pet;
   }
 
+  async createPet(data: Omit<Pet, "id" | "isAdopted">): Promise<Pet> {
+    const [pet] = await db.insert(pets).values({ ...data, isAdopted: false }).returning();
+    return pet;
+  }
+
+  async updatePet(id: number, data: Partial<Pet>): Promise<Pet> {
+    const [pet] = await db.update(pets).set(data).where(eq(pets.id, id)).returning();
+    return pet;
+  }
+
+  async deletePet(id: number): Promise<void> {
+    await db.delete(adoptions).where(eq(adoptions.petId, id));
+    await db.delete(pets).where(eq(pets.id, id));
+  }
+
   async createAdoption(userId: number, data: InsertAdoption): Promise<Adoption> {
     const [adoption] = await db.insert(adoptions).values({
       userId,
@@ -70,6 +91,37 @@ export class DatabaseStorage implements IStorage {
 
   async getAdoptionsByUser(userId: number): Promise<Adoption[]> {
     return await db.select().from(adoptions).where(eq(adoptions.userId, userId));
+  }
+
+  async getAllAdoptions(): Promise<(Adoption & { username: string })[]> {
+    const rows = await db
+      .select({
+        id: adoptions.id,
+        userId: adoptions.userId,
+        petId: adoptions.petId,
+        status: adoptions.status,
+        applicantName: adoptions.applicantName,
+        applicantEmail: adoptions.applicantEmail,
+        applicantPhone: adoptions.applicantPhone,
+        hasAdoptedBefore: adoptions.hasAdoptedBefore,
+        hasPets: adoptions.hasPets,
+        hasChildren: adoptions.hasChildren,
+        livingSituation: adoptions.livingSituation,
+        reason: adoptions.reason,
+        createdAt: adoptions.createdAt,
+        username: users.username,
+      })
+      .from(adoptions)
+      .leftJoin(users, eq(adoptions.userId, users.id));
+    return rows as (Adoption & { username: string })[];
+  }
+
+  async updateAdoptionStatus(id: number, status: string): Promise<Adoption> {
+    const [adoption] = await db.update(adoptions).set({ status }).where(eq(adoptions.id, id)).returning();
+    if (status === "rejected") {
+      await db.update(pets).set({ isAdopted: false }).where(eq(pets.id, adoption.petId));
+    }
+    return adoption;
   }
 }
 

@@ -16,7 +16,7 @@ export function Navbar() {
     { name: "Available Pets", href: "/#pets" },
     { name: "Process", href: "/#process" },
     { name: "Stories", href: "/#stories" },
-    { name: "About Us", href: "/#about" },
+    { name: "About Us", href: "/about" },
     { name: "Contact", href: "/#contact" },
   ];
 
@@ -52,11 +52,19 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             {user ? (
               <div className="flex items-center gap-4">
-                <Link href="/profile">
-                   <span className="font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
-                     Hi, {user.username}
-                   </span>
-                </Link>
+                {user.isAdmin ? (
+                  <Link href="/admin">
+                    <span className="font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
+                      Admin Panel
+                    </span>
+                  </Link>
+                ) : (
+                  <Link href="/profile">
+                    <span className="font-semibold text-gray-700 cursor-pointer hover:text-primary transition-colors">
+                      Hi, {user.username}
+                    </span>
+                  </Link>
+                )}
                 <Button
                   variant="outline"
                   onClick={() => logoutMutation.mutate()}
