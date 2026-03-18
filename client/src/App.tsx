@@ -6,6 +6,7 @@ import { AuthProvider } from "@/hooks/use-auth";
 import HomePage from "@/pages/home-page";
 import AuthPage from "@/pages/auth-page";
 import ProfilePage from "@/pages/profile-page";
+import AdoptPage from "@/pages/adopt-page";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path="/login" component={AuthPage} />
       <Route path="/register" component={AuthPage} />
       <Route path="/profile" component={ProfilePage} />
+      <Route path="/adopt/:petId" component={AdoptPage} />
       <Route component={NotFound} />
     </Switch>
   );

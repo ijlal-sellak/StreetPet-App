@@ -1,4 +1,4 @@
-import { users, pets, adoptions, type User, type InsertUser, type Pet, type Adoption } from "@shared/schema";
+import { users, pets, adoptions, type User, type InsertUser, type Pet, type Adoption, type InsertAdoption, type UpdateUser } from "@shared/schema";
 import { db } from "./db";
 import { eq } from "drizzle-orm";
 
@@ -6,10 +6,12 @@ export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
-  
+  updateUser(id: number, data: UpdateUser): Promise<User>;
+  deleteUser(id: number): Promise<void>;
+
   getPets(): Promise<Pet[]>;
   getPet(id: number): Promise<Pet | undefined>;
-  createAdoption(userId: number, petId: number): Promise<Adoption>;
+  createAdoption(userId: number, data: InsertAdoption): Promise<Adoption>;
   getAdoptionsByUser(userId: number): Promise<Adoption[]>;
 }
 
@@ -29,6 +31,16 @@ export class DatabaseStorage implements IStorage {
     return user;
   }
 
+  async updateUser(id: number, data: UpdateUser): Promise<User> {
+    const [user] = await db.update(users).set(data).where(eq(users.id, id)).returning();
+    return user;
+  }
+
+  async deleteUser(id: number): Promise<void> {
+    await db.delete(adoptions).where(eq(adoptions.userId, id));
+    await db.delete(users).where(eq(users.id, id));
+  }
+
   async getPets(): Promise<Pet[]> {
     return await db.select().from(pets);
   }
@@ -38,9 +50,21 @@ export class DatabaseStorage implements IStorage {
     return pet;
   }
 
-  async createAdoption(userId: number, petId: number): Promise<Adoption> {
-    const [adoption] = await db.insert(adoptions).values({ userId, petId, status: "pending" }).returning();
-    await db.update(pets).set({ isAdopted: true }).where(eq(pets.id, petId));
+  async createAdoption(userId: number, data: InsertAdoption): Promise<Adoption> {
+    const [adoption] = await db.insert(adoptions).values({
+      userId,
+      petId: data.petId,
+      status: "pending",
+      applicantName: data.applicantName,
+      applicantEmail: data.applicantEmail,
+      applicantPhone: data.applicantPhone,
+      hasAdoptedBefore: data.hasAdoptedBefore,
+      hasPets: data.hasPets,
+      hasChildren: data.hasChildren,
+      livingSituation: data.livingSituation,
+      reason: data.reason,
+    }).returning();
+    await db.update(pets).set({ isAdopted: true }).where(eq(pets.id, data.petId));
     return adoption;
   }
 
