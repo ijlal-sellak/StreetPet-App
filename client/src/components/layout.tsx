@@ -195,9 +195,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-gray-800 mb-6">Contact</h4>
             <ul className="space-y-3 text-gray-500">
-              <li>123 Pet Street</li>
-              <li>New York, NY 10012</li>
-              <li>hello@streetpet.com</li>
+              <li>Rabat, Morocco</li>
               <li>+1 (555) 123-4567</li>
             </ul>
           </div>
