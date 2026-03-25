@@ -115,16 +115,14 @@ export default function AboutPage() {
                 <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold mb-3">
                   <FaShieldAlt /> Administrator & Founder
                 </div>
-                <h3 className="text-3xl font-bold text-gray-800 mb-2">ijlal_sellak</h3>
+                <h3 className="text-3xl font-bold text-gray-800 mb-2">IJLAL SELLAK</h3>
                 <p className="text-primary font-semibold mb-4">Founder · StreetPet</p>
                 <p className="text-gray-500 text-lg leading-relaxed mb-6">
-                  "I created StreetPet after seeing too many animals on the streets with nowhere to go. 
-                  Every animal I passed reminded me that the problem wasn't unsolvable — it just needed people 
-                  who cared enough to act. This platform is my way of connecting those people with the animals who need them most."
+                  "I started Street Pet because in my school and around my home, I see so many cats, dogs—pets in general—and they are so cute. But what breaks my heart is that they don't have shelter, and they don't have someone to take care of them. They're living creatures, just like you and me. They deserve a happy life, a warm place to rest, a meal, and a family to call their own. No living being should have to survive alone in the streets when we have the power to make a difference. That's why I couldn't just stand there and do nothing. I had to be their voice, their hope, their beginning of a better life."
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <span className="px-4 py-2 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm">🐾 Animal Welfare Advocate</span>
-                  <span className="px-4 py-2 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm">💻 Platform Builder</span>
+                  <span className="px-4 py-2 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm">📊 Data Science Student</span>
                   <span className="px-4 py-2 bg-white rounded-xl text-sm font-semibold text-gray-700 shadow-sm">❤️ Pet Lover</span>
                 </div>
               </div>

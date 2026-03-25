@@ -4,7 +4,7 @@ import { setupAuth } from "./auth";
 import { storage } from "./storage";
 import { db } from "./db";
 import { pets } from "@shared/schema";
-import { insertAdoptionSchema, updateUserSchema } from "@shared/schema";
+import { insertAdoptionSchema, updateUserSchema, insertStorySchema } from "@shared/schema";
 import { z } from "zod";
 
 async function seedPets() {
@@ -125,6 +125,19 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
     }
     const adoption = await storage.updateAdoptionStatus(Number(req.params.id), status);
     res.json(adoption);
+  });
+
+  // Stories routes
+  app.get("/api/stories", async (req, res) => {
+    const allStories = await storage.getStories();
+    res.json(allStories);
+  });
+
+  app.post("/api/stories", async (req, res) => {
+    const parsed = insertStorySchema.safeParse(req.body);
+    if (!parsed.success) return res.status(400).json({ message: parsed.error.errors[0].message });
+    const story = await storage.createStory(parsed.data);
+    res.status(201).json(story);
   });
 
   return httpServer;

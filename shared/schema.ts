@@ -57,6 +57,17 @@ export const insertAdoptionSchema = z.object({
   reason: z.string().min(10, "Please tell us why you want to adopt (min 10 characters)"),
 });
 
+export const stories = pgTable("stories", {
+  id: serial("id").primaryKey(),
+  authorName: text("author_name").notNull(),
+  petName: text("pet_name").notNull(),
+  content: text("content").notNull(),
+  imageUrl: text("image_url").default(""),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const insertStorySchema = createInsertSchema(stories).omit({ id: true, createdAt: true });
+
 export const updateUserSchema = z.object({
   bio: z.string().optional(),
   avatarUrl: z.string().optional(),
@@ -64,7 +75,9 @@ export const updateUserSchema = z.object({
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type InsertAdoption = z.infer<typeof insertAdoptionSchema>;
+export type InsertStory = z.infer<typeof insertStorySchema>;
 export type UpdateUser = z.infer<typeof updateUserSchema>;
 export type User = typeof users.$inferSelect;
 export type Pet = typeof pets.$inferSelect;
 export type Adoption = typeof adoptions.$inferSelect;
+export type Story = typeof stories.$inferSelect;

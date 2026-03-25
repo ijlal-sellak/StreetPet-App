@@ -1,4 +1,4 @@
-import { users, pets, adoptions, type User, type InsertUser, type Pet, type Adoption, type InsertAdoption, type UpdateUser } from "@shared/schema";
+import { users, pets, adoptions, stories, type User, type InsertUser, type Pet, type Adoption, type InsertAdoption, type UpdateUser, type Story, type InsertStory } from "@shared/schema";
 import { db } from "./db";
 import { eq } from "drizzle-orm";
 
@@ -19,6 +19,9 @@ export interface IStorage {
   getAdoptionsByUser(userId: number): Promise<Adoption[]>;
   getAllAdoptions(): Promise<(Adoption & { username: string })[]>;
   updateAdoptionStatus(id: number, status: string): Promise<Adoption>;
+
+  getStories(): Promise<Story[]>;
+  createStory(data: InsertStory): Promise<Story>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -122,6 +125,15 @@ export class DatabaseStorage implements IStorage {
       await db.update(pets).set({ isAdopted: false }).where(eq(pets.id, adoption.petId));
     }
     return adoption;
+  }
+
+  async getStories(): Promise<Story[]> {
+    return await db.select().from(stories).orderBy(stories.createdAt);
+  }
+
+  async createStory(data: InsertStory): Promise<Story> {
+    const [story] = await db.insert(stories).values(data).returning();
+    return story;
   }
 }
 
