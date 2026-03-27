@@ -243,7 +243,7 @@ cd streetpet
 
 npm install
 
-###Step 3: Create the database
+### Step 3: Create the database
 
 CREATE DATABASE streetpet_db;
 
