@@ -1,590 +1,590 @@
 # 
 
-# \# 🐾 StreetPet - Pet Adoption Platform
+###### \# 🐾 StreetPet - Pet Adoption Platform
 
-# 
+###### 
 
-# A full-stack pet adoption platform that connects loving homes with pets in need. Built with Node.js, Express, PostgreSQL, React, and Tailwind CSS.
+###### A full-stack pet adoption platform that connects loving homes with pets in need. Built with Node.js, Express, PostgreSQL, React, and Tailwind CSS.
 
-# 
+###### 
 
-# !\[StreetPet Banner](https://via.placeholder.com/1200x400/4ECDC4/FFFFFF?text=StreetPet+-+Adopt+a+Friend+Today)
+###### !\[StreetPet Banner](https://via.placeholder.com/1200x400/4ECDC4/FFFFFF?text=StreetPet+-+Adopt+a+Friend+Today)
 
-# 
+###### 
 
-# \---
+###### \---
 
-# 
+###### 
 
-# \## 📋 Table of Contents
+###### \## 📋 Table of Contents
 
-# 
+###### 
 
-# \- \[Overview](#overview)
+###### \- \[Overview](#overview)
 
-# \- \[Features](#features)
+###### \- \[Features](#features)
 
-# \- \[Tech Stack](#tech-stack)
+###### \- \[Tech Stack](#tech-stack)
 
-# \- \[Project Structure](#project-structure)
+###### \- \[Project Structure](#project-structure)
 
-# \- \[Prerequisites](#prerequisites)
+###### \- \[Prerequisites](#prerequisites)
 
-# \- \[Installation](#installation)
+###### \- \[Installation](#installation)
 
-# \- \[Configuration](#configuration)
+###### \- \[Configuration](#configuration)
 
-# \- \[Database Setup](#database-setup)
+###### \- \[Database Setup](#database-setup)
 
-# \- \[Running the Application](#running-the-application)
+###### \- \[Running the Application](#running-the-application)
 
-# \- \[API Documentation](#api-documentation)
+###### \- \[API Documentation](#api-documentation)
 
-# \- \[User Roles](#user-roles)
+###### \- \[User Roles](#user-roles)
 
-# \- \[Creating an Admin](#creating-an-admin)
+###### \- \[Creating an Admin](#creating-an-admin)
 
-# \- \[Troubleshooting](#troubleshooting)
+###### \- \[Troubleshooting](#troubleshooting)
 
-# \- \[Deployment](#deployment)
+###### \- \[Deployment](#deployment)
 
-# \- \[Contributing](#contributing)
+###### \- \[Contributing](#contributing)
 
-# \- \[License](#license)
+###### \- \[License](#license)
 
-# 
+###### 
 
-# \---
+###### \---
 
-# 
+###### 
 
-# \## 🌟 Overview
+###### \## 🌟 Overview
 
-# 
+###### 
 
-# StreetPet is a comprehensive pet adoption platform designed to help shelters and rescue organizations manage pet listings and streamline the adoption process. The platform provides separate interfaces for regular users and administrators, ensuring a smooth experience for both adopters and shelter staff.
+###### StreetPet is a comprehensive pet adoption platform designed to help shelters and rescue organizations manage pet listings and streamline the adoption process. The platform provides separate interfaces for regular users and administrators, ensuring a smooth experience for both adopters and shelter staff.
 
-# 
+###### 
 
-# \*\*Live Demo:\*\* \[https://streetpet-demo.example.com](https://streetpet-demo.example.com)
+###### \*\*Live Demo:\*\* \[https://streetpet-demo.example.com](https://streetpet-demo.example.com)
 
-# 
+###### 
 
-# \---
+###### \---
 
-# 
+###### 
 
-# \## ✨ Features
+###### \## ✨ Features
 
-# 
+###### 
 
-# \### 👥 User Features
+###### \### 👥 User Features
 
-# \- \*\*User Registration \& Login\*\* - Secure account creation with password hashing
+###### \- \*\*User Registration \& Login\*\* - Secure account creation with password hashing
 
-# \- \*\*Browse Pets\*\* - View all available pets with filters (species, age, size, location)
+###### \- \*\*Browse Pets\*\* - View all available pets with filters (species, age, size, location)
 
-# \- \*\*Pet Details\*\* - Detailed information about each pet including photos, description, and health status
+###### \- \*\*Pet Details\*\* - Detailed information about each pet including photos, description, and health status
 
-# \- \*\*Adoption Application\*\* - Submit adoption requests with personalized messages
+###### \- \*\*Adoption Application\*\* - Submit adoption requests with personalized messages
 
-# \- \*\*User Profile\*\* - Manage personal information and view adoption history
+###### \- \*\*User Profile\*\* - Manage personal information and view adoption history
 
-# \- \*\*Adoption Status Tracking\*\* - Track the progress of adoption applications
+###### \- \*\*Adoption Status Tracking\*\* - Track the progress of adoption applications
 
-# 
+###### 
 
-# \### 👑 Admin Features
+###### \### 👑 Admin Features
 
-# \- \*\*Admin Dashboard\*\* - Overview of platform statistics
+###### \- \*\*Admin Dashboard\*\* - Overview of platform statistics
 
-# \- \*\*Pet Management\*\* - Add, edit, delete, and manage pet listings
+###### \- \*\*Pet Management\*\* - Add, edit, delete, and manage pet listings
 
-# \- \*\*Adoption Management\*\* - Approve, reject, or process adoption requests
+###### \- \*\*Adoption Management\*\* - Approve, reject, or process adoption requests
 
-# \- \*\*User Management\*\* - View and manage user accounts
+###### \- \*\*User Management\*\* - View and manage user accounts
 
-# \- \*\*Role Management\*\* - Grant or revoke admin privileges
+###### \- \*\*Role Management\*\* - Grant or revoke admin privileges
 
-# 
+###### 
 
-# \### 🔒 Security Features
+###### \### 🔒 Security Features
 
-# \- Password hashing with bcrypt
+###### \- Password hashing with bcrypt
 
-# \- Session-based authentication
+###### \- Session-based authentication
 
-# \- Protected API routes
+###### \- Protected API routes
 
-# \- CSRF protection
+###### \- CSRF protection
 
-# \- Input validation and sanitization
+###### \- Input validation and sanitization
 
-# 
+###### 
 
-# \### 🎨 UI/UX Features
+###### \### 🎨 UI/UX Features
 
-# \- Responsive design (mobile, tablet, desktop)
+###### \- Responsive design (mobile, tablet, desktop)
 
-# \- Modern, clean interface with Tailwind CSS
+###### \- Modern, clean interface with Tailwind CSS
 
-# \- Real-time form validation
+###### \- Real-time form validation
 
-# \- Loading states and error handling
+###### \- Loading states and error handling
 
-# \- Accessible components
+###### \- Accessible components
 
-# 
+###### 
 
-# \---
+###### \---
 
-# 
+###### 
 
-# \## 🛠️ Tech Stack
+###### \## 🛠️ Tech Stack
 
-# 
+###### 
 
-# \### Backend
+###### \### Backend
 
-# | Technology | Description |
+###### | Technology | Description |
 
-# |------------|-------------|
+###### |------------|-------------|
 
-# | \*\*Node.js\*\* | JavaScript runtime environment |
+###### | \*\*Node.js\*\* | JavaScript runtime environment |
 
-# | \*\*Express.js\*\* | Web application framework |
+###### | \*\*Express.js\*\* | Web application framework |
 
-# | \*\*PostgreSQL\*\* | Relational database |
+###### | \*\*PostgreSQL\*\* | Relational database |
 
-# | \*\*Drizzle ORM\*\* | TypeScript ORM for database operations |
+###### | \*\*Drizzle ORM\*\* | TypeScript ORM for database operations |
 
-# | \*\*Passport.js\*\* | Authentication middleware |
+###### | \*\*Passport.js\*\* | Authentication middleware |
 
-# | \*\*bcrypt\*\* | Password hashing library |
+###### | \*\*bcrypt\*\* | Password hashing library |
 
-# | \*\*express-session\*\* | Session management |
+###### | \*\*express-session\*\* | Session management |
 
-# 
+###### 
 
-# \### Frontend
+###### \### Frontend
 
-# | Technology | Description |
+###### | Technology | Description |
 
-# |------------|-------------|
+###### |------------|-------------|
 
-# | \*\*React\*\* | UI library |
+###### | \*\*React\*\* | UI library |
 
-# | \*\*Vite\*\* | Build tool and development server |
+###### | \*\*Vite\*\* | Build tool and development server |
 
-# | \*\*TypeScript\*\* | Type-safe JavaScript |
+###### | \*\*TypeScript\*\* | Type-safe JavaScript |
 
-# | \*\*Tailwind CSS\*\* | Utility-first CSS framework |
+###### | \*\*Tailwind CSS\*\* | Utility-first CSS framework |
 
-# | \*\*TanStack Query\*\* | Data fetching and caching |
+###### | \*\*TanStack Query\*\* | Data fetching and caching |
 
-# | \*\*Wouter\*\* | Lightweight routing |
+###### | \*\*Wouter\*\* | Lightweight routing |
 
-# | \*\*Lucide React\*\* | Icon library |
+###### | \*\*Lucide React\*\* | Icon library |
 
-# 
+###### 
 
-# \### Development Tools
+###### \### Development Tools
 
-# | Tool | Description |
+###### | Tool | Description |
 
-# |------|-------------|
+###### |------|-------------|
 
-# | \*\*Drizzle Kit\*\* | Database schema management |
+###### | \*\*Drizzle Kit\*\* | Database schema management |
 
-# | \*\*tsx\*\* | TypeScript execution for Node.js |
+###### | \*\*tsx\*\* | TypeScript execution for Node.js |
 
-# | \*\*ESLint\*\* | Code linting |
+###### | \*\*ESLint\*\* | Code linting |
 
-# | \*\*Prettier\*\* | Code formatting |
+###### | \*\*Prettier\*\* | Code formatting |
 
-# 
+###### 
 
-# \---
+###### \---
 
-# 
+###### 
 
-# \## 📁 Project Structure
+###### \## 📁 Project Structure
 
-# streetpet/
+###### streetpet/
 
-# │
+###### │
 
-# ├── client/ # Frontend application
+###### ├── client/ # Frontend application
 
-# │ ├── src/
+###### │ ├── src/
 
-# │ │ ├── components/ # Reusable React components
+###### │ │ ├── components/ # Reusable React components
 
-# │ │ │ ├── Layout.tsx # Main layout wrapper
+###### │ │ │ ├── Layout.tsx # Main layout wrapper
 
-# │ │ │ ├── Navbar.tsx # Navigation bar
+###### │ │ │ ├── Navbar.tsx # Navigation bar
 
-# │ │ │ ├── PetCard.tsx # Pet listing card
+###### │ │ │ ├── PetCard.tsx # Pet listing card
 
-# │ │ │ ├── PetFilters.tsx # Filter sidebar
+###### │ │ │ ├── PetFilters.tsx # Filter sidebar
 
-# │ │ │ ├── AdoptionForm.tsx # Adoption application form
+###### │ │ │ ├── AdoptionForm.tsx # Adoption application form
 
-# │ │ │ └── ProtectedRoute.tsx # Route protection wrapper
+###### │ │ │ └── ProtectedRoute.tsx # Route protection wrapper
 
-# │ │ │
+###### │ │ │
 
-# │ │ ├── pages/ # Page components
+###### │ │ ├── pages/ # Page components
 
-# │ │ │ ├── Home.tsx # Landing page with pet listings
+###### │ │ │ ├── Home.tsx # Landing page with pet listings
 
-# │ │ │ ├── Login.tsx # User login page
+###### │ │ │ ├── Login.tsx # User login page
 
-# │ │ │ ├── Register.tsx # User registration page
+###### │ │ │ ├── Register.tsx # User registration page
 
-# │ │ │ ├── Profile.tsx # User profile and adoption history
+###### │ │ │ ├── Profile.tsx # User profile and adoption history
 
-# │ │ │ ├── PetDetails.tsx # Individual pet view
+###### │ │ │ ├── PetDetails.tsx # Individual pet view
 
-# │ │ │ └── Admin/ # Admin section
+###### │ │ │ └── Admin/ # Admin section
 
-# │ │ │ ├── Dashboard.tsx # Admin dashboard
+###### │ │ │ ├── Dashboard.tsx # Admin dashboard
 
-# │ │ │ ├── ManagePets.tsx # Pet management
+###### │ │ │ ├── ManagePets.tsx # Pet management
 
-# │ │ │ ├── ManageAdoptions.tsx # Adoption management
+###### │ │ │ ├── ManageAdoptions.tsx # Adoption management
 
-# │ │ │ └── ManageUsers.tsx # User management
+###### │ │ │ └── ManageUsers.tsx # User management
 
-# │ │ │
+###### │ │ │
 
-# │ │ ├── hooks/ # Custom React hooks
+###### │ │ ├── hooks/ # Custom React hooks
 
-# │ │ │ ├── useAuth.ts # Authentication hook
+###### │ │ │ ├── useAuth.ts # Authentication hook
 
-# │ │ │ ├── usePets.ts # Pets data hook
+###### │ │ │ ├── usePets.ts # Pets data hook
 
-# │ │ │ └── useAdoptions.ts # Adoptions data hook
+###### │ │ │ └── useAdoptions.ts # Adoptions data hook
 
-# │ │ │
+###### │ │ │
 
-# │ │ ├── lib/ # Utilities and configurations
+###### │ │ ├── lib/ # Utilities and configurations
 
-# │ │ │ ├── api.ts # API client configuration
+###### │ │ │ ├── api.ts # API client configuration
 
-# │ │ │ ├── constants.ts # Application constants
+###### │ │ │ ├── constants.ts # Application constants
 
-# │ │ │ └── utils.ts # Helper functions
+###### │ │ │ └── utils.ts # Helper functions
 
-# │ │ │
+###### │ │ │
 
-# │ │ ├── types/ # TypeScript type definitions
+###### │ │ ├── types/ # TypeScript type definitions
 
-# │ │ │ └── index.ts # Shared types
+###### │ │ │ └── index.ts # Shared types
 
-# │ │ │
+###### │ │ │
 
-# │ │ ├── App.tsx # Main application component
+###### │ │ ├── App.tsx # Main application component
 
-# │ │ ├── main.tsx # Application entry point
+###### │ │ ├── main.tsx # Application entry point
 
-# │ │ └── index.css # Global styles (Tailwind)
+###### │ │ └── index.css # Global styles (Tailwind)
 
-# │ │
+###### │ │
 
-# │ └── index.html # HTML template
+###### │ └── index.html # HTML template
 
-# │
+###### │
 
-# ├── server/ # Backend application
+###### ├── server/ # Backend application
 
-# │ ├── auth.ts # Authentication configuration
+###### │ ├── auth.ts # Authentication configuration
 
-# │ ├── db.ts # Database connection setup
+###### │ ├── db.ts # Database connection setup
 
-# │ ├── index.ts # Server entry point
+###### │ ├── index.ts # Server entry point
 
-# │ ├── routes.ts # API route registration
+###### │ ├── routes.ts # API route registration
 
-# │ ├── storage.ts # Database operations interface
+###### │ ├── storage.ts # Database operations interface
 
-# │ └── vite.ts # Vite integration
+###### │ └── vite.ts # Vite integration
 
-# │
+###### │
 
-# ├── shared/ # Shared code between frontend and backend
+###### ├── shared/ # Shared code between frontend and backend
 
-# │ ├── schema.ts # Database schema definition
+###### │ ├── schema.ts # Database schema definition
 
-# │ └── routes.ts # API route definitions
+###### │ └── routes.ts # API route definitions
 
-# │
+###### │
 
-# ├── drizzle.config.ts # Drizzle ORM configuration
+###### ├── drizzle.config.ts # Drizzle ORM configuration
 
-# ├── tailwind.config.js # Tailwind CSS configuration
+###### ├── tailwind.config.js # Tailwind CSS configuration
 
-# ├── tsconfig.json # TypeScript configuration
+###### ├── tsconfig.json # TypeScript configuration
 
-# ├── vite.config.ts # Vite configuration
+###### ├── vite.config.ts # Vite configuration
 
-# ├── package.json # Dependencies and scripts
+###### ├── package.json # Dependencies and scripts
 
-# ├── .env.example # Environment variables example
+###### ├── .env.example # Environment variables example
 
-# ├── .gitignore # Git ignore rules
+###### ├── .gitignore # Git ignore rules
 
-# └── README.md # Project documentation
+###### └── README.md # Project documentation
 
-# 
+###### 
 
-# text
+###### text
 
-# 
+###### 
 
-# \---
+###### \---
 
-# 
+###### 
 
-# \## 📦 Prerequisites
+###### \## 📦 Prerequisites
 
-# 
+###### 
 
-# Before you begin, ensure you have the following installed:
+###### Before you begin, ensure you have the following installed:
 
-# 
+###### 
 
-# \- \*\*Node.js\*\* (version 18 or higher)
+###### \- \*\*Node.js\*\* (version 18 or higher)
 
-# &#x20; ```bash
+###### &#x20; ```bash
 
-# &#x20; node --version  # Should output v18.0.0 or higher
+###### &#x20; node --version  # Should output v18.0.0 or higher
 
-# npm (comes with Node.js)
+###### npm (comes with Node.js)
 
-# 
+###### 
 
-# bash
+###### bash
 
-# npm --version   # Should output 9.0.0 or higher
+###### npm --version   # Should output 9.0.0 or higher
 
-# PostgreSQL (version 14 or higher)
+###### PostgreSQL (version 14 or higher)
 
-# 
+###### 
 
-# bash
+###### bash
 
-# psql --version  # Should output psql (PostgreSQL) 14.0 or higher
+###### psql --version  # Should output psql (PostgreSQL) 14.0 or higher
 
-# Git (for version control)
+###### Git (for version control)
 
-# 
+###### 
 
-# bash
+###### bash
 
-# git --version   # Should output 2.30.0 or higher
+###### git --version   # Should output 2.30.0 or higher
 
-# 🚀 Installation
+###### 🚀 Installation
 
-# Step 1: Clone the repository
+###### Step 1: Clone the repository
 
-# bash
+###### bash
 
-# git clone https://github.com/YOUR\_USERNAME/streetpet.git
+###### git clone https://github.com/YOUR\_USERNAME/streetpet.git
 
-# cd streetpet
+###### cd streetpet
 
-# Step 2: Install dependencies
+###### Step 2: Install dependencies
 
-# bash
+###### bash
 
-# npm install
+###### npm install
 
-# This will install all required dependencies for both the backend and frontend.
+###### This will install all required dependencies for both the backend and frontend.
 
-# 
+###### 
 
-# Step 3: Create the database
+###### Step 3: Create the database
 
-# Open pgAdmin or use the command line to create a new database:
+###### Open pgAdmin or use the command line to create a new database:
 
-# 
+###### 
 
-# Using pgAdmin:
+###### Using pgAdmin:
 
-# 
+###### 
 
-# Open pgAdmin
+###### Open pgAdmin
 
-# 
+###### 
 
-# Right-click on "Databases" → "Create" → "Database"
+###### Right-click on "Databases" → "Create" → "Database"
 
-# 
+###### 
 
-# Name it streetpet\_db
+###### Name it streetpet\_db
 
-# 
+###### 
 
-# Click "Save"
+###### Click "Save"
 
-# 
+###### 
 
-# Using command line:
+###### Using command line:
 
-# 
+###### 
 
-# sql
+###### sql
 
-# CREATE DATABASE streetpet\_db;
+###### CREATE DATABASE streetpet\_db;
 
-# Step 4: Configure environment variables
+###### Step 4: Configure environment variables
 
-# Copy the example environment file:
+###### Copy the example environment file:
 
-# 
+###### 
 
-# bash
+###### bash
 
-# cp .env.example .env
+###### cp .env.example .env
 
-# Open the .env file and update it with your configuration:
+###### Open the .env file and update it with your configuration:
 
-# 
+###### 
 
-# env
+###### env
 
-# \# Database Configuration
+###### \# Database Configuration
 
-# DATABASE\_URL=postgresql://postgres:YOUR\_PASSWORD@localhost:5432/streetpet\_db
+###### DATABASE\_URL=postgresql://postgres:YOUR\_PASSWORD@localhost:5432/streetpet\_db
 
-# 
+###### 
 
-# \# Server Configuration
+###### \# Server Configuration
 
-# PORT=3000
+###### PORT=3000
 
-# 
+###### 
 
-# \# Environment
+###### \# Environment
 
-# NODE\_ENV=development
+###### NODE\_ENV=development
 
-# 
+###### 
 
-# \# Session Secret (for production, use a strong random string)
+###### \# Session Secret (for production, use a strong random string)
 
-# SESSION\_SECRET=your-session-secret-key
+###### SESSION\_SECRET=your-session-secret-key
 
-# ⚠️ Important: Never commit the .env file to version control. It's already in .gitignore.
+###### ⚠️ Important: Never commit the .env file to version control. It's already in .gitignore.
 
-# 
+###### 
 
-# Step 5: Initialize the database schema
+###### Step 5: Initialize the database schema
 
-# bash
+###### bash
 
-# npm run db:push
+###### npm run db:push
 
-# This command will:
+###### This command will:
 
-# 
+###### 
 
-# Connect to your PostgreSQL database
+###### Connect to your PostgreSQL database
 
-# 
+###### 
 
-# Create all necessary tables based on the schema
+###### Create all necessary tables based on the schema
 
-# 
+###### 
 
-# Set up relationships and indexes
+###### Set up relationships and indexes
 
-# 
+###### 
 
-# 🗄️ Database Setup
+###### 🗄️ Database Setup
 
-# Database Schema
+###### Database Schema
 
-# The application uses the following main tables:
+###### The application uses the following main tables:
 
-# 
+###### 
 
-# users - User accounts
+###### users - User accounts
 
-# Column	Type	Description
+###### Column	Type	Description
 
-# id	integer	Primary key, auto-increment
+###### id	integer	Primary key, auto-increment
 
-# username	text	Unique username
+###### username	text	Unique username
 
-# password	text	Hashed password
+###### password	text	Hashed password
 
-# is\_admin	boolean	Admin privileges flag
+###### is\_admin	boolean	Admin privileges flag
 
-# email	text	User email address
+###### email	text	User email address
 
-# bio	text	User biography
+###### bio	text	User biography
 
-# avatar\_url	text	Profile picture URL
+###### avatar\_url	text	Profile picture URL
 
-# pets - Pet listings
+###### pets - Pet listings
 
-# Column	Type	Description
+###### Column	Type	Description
 
-# id	integer	Primary key, auto-increment
+###### id	integer	Primary key, auto-increment
 
-# name	text	Pet name
+###### name	text	Pet name
 
-# species	text	Dog, Cat, etc.
+###### species	text	Dog, Cat, etc.
 
-# breed	text	Breed information
+###### breed	text	Breed information
 
-# age	integer	Age in months/years
+###### age	integer	Age in months/years
 
-# size	text	Small, Medium, Large
+###### size	text	Small, Medium, Large
 
-# description	text	Detailed description
+###### description	text	Detailed description
 
-# image\_url	text	Photo URL
+###### image\_url	text	Photo URL
 
-# status	text	Available, Pending, Adopted
+###### status	text	Available, Pending, Adopted
 
-# adoptions - Adoption applications
+###### adoptions - Adoption applications
 
-# Column	Type	Description
+###### Column	Type	Description
 
-# id	integer	Primary key, auto-increment
+###### id	integer	Primary key, auto-increment
 
-# user\_id	integer	Foreign key to users
+###### user\_id	integer	Foreign key to users
 
-# pet\_id	integer	Foreign key to pets
+###### pet\_id	integer	Foreign key to pets
 
-# status	text	Pending, Approved, Rejected
+###### status	text	Pending, Approved, Rejected
 
-# message	text	Adoption application message
+###### message	text	Adoption application message
 
-# created\_at	timestamp	Application date
+###### created\_at	timestamp	Application date
 
-# ▶️ Running the Application
+###### ▶️ Running the Application
 
-# Development Mode
+###### Development Mode
 
-# Start the development server with hot reload:
+###### Start the development server with hot reload:
 
-# 
+###### 
 
-# bash
+###### bash
 
-# npm run dev
+###### npm run dev
 
-# This will start both the backend and frontend servers:
+###### This will start both the backend and frontend servers:
 
-# 
+###### 
 
-# Frontend: http://localhost:3000
+###### Frontend: http://localhost:3000
 
-# 
+###### 
 
-# API: http://localhost:3000/api
+###### API: http://localhost:3000/api
 
