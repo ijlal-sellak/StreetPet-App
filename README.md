@@ -1,104 +1,152 @@
-# 🐾 StreetPet - Pet Adoption Platform
+<p align="center">
+  <img src="https://img.icons8.com/color/96/000000/dog.png" width="80">
+</p>
 
-A full-stack pet adoption platform that connects loving homes with pets in need. Built with Node.js, Express, PostgreSQL, React, and Tailwind CSS.
+<h1 align="center">🐾 StreetPet - Pet Adoption Platform</h1>
 
-![StreetPet Banner](https://via.placeholder.com/1200x400/4ECDC4/FFFFFF?text=StreetPet+-+Adopt+a+Friend+Today)
+<p align="center">
+  <strong>Connecting loving homes with pets in need</strong><br>
+  <span>A full-stack pet adoption platform built with Node.js, PostgreSQL, React, and Tailwind CSS</span>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/ijlal-sellak/StreetPet-App?style=for-the-badge&color=4ECDC4">
+  <img src="https://img.shields.io/github/forks/ijlal-sellak/StreetPet-App?style=for-the-badge&color=4ECDC4">
+  <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/node.js-18+-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/PostgreSQL-14+-blue?style=for-the-badge&logo=postgresql">
+</p>
 
 ---
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Database Setup](#database-setup)
-- [Running the Application](#running-the-application)
-- [API Documentation](#api-documentation)
-- [User Roles](#user-roles)
-- [Creating an Admin](#creating-an-admin)
-- [Troubleshooting](#troubleshooting)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+- [🌟 Overview](#-overview)
+- [✨ Features](#-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [📦 Prerequisites](#-prerequisites)
+- [🚀 Installation](#-installation)
+- [🗄️ Database Setup](#️-database-setup)
+- [▶️ Running the Application](#️-running-the-application)
+- [🔌 API Documentation](#-api-documentation)
+- [👥 User Roles](#-user-roles)
+- [👑 Creating an Admin](#-creating-an-admin)
+- [🐛 Troubleshooting](#-troubleshooting)
+- [🚢 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
 ## 🌟 Overview
 
-StreetPet is a comprehensive pet adoption platform designed to help shelters and rescue organizations manage pet listings and streamline the adoption process. The platform provides separate interfaces for regular users and administrators, ensuring a smooth experience for both adopters and shelter staff.
+<p>
+  <strong>StreetPet</strong> is a comprehensive pet adoption platform designed to help shelters and rescue organizations manage pet listings and streamline the adoption process. The platform provides separate interfaces for regular users and administrators, ensuring a smooth experience for both adopters and shelter staff.
+</p>
 
-**Live Demo:** [https://streetpet-demo.example.com](https://streetpet-demo.example.com)
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🐶 For Adopters</h3>
+      <ul>
+        <li>Browse and search available pets</li>
+        <li>Submit adoption applications</li>
+        <li>Track application status</li>
+        <li>Manage personal profile</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🏢 For Shelters</h3>
+      <ul>
+        <li>Manage pet listings</li>
+        <li>Process adoption requests</li>
+        <li>View analytics dashboard</li>
+        <li>Manage user accounts</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+**Live Demo:** [https://streetpet-demo.example.com](https://streetpet-demo.example.com) *(Coming soon)*
 
 ---
 
 ## ✨ Features
 
 ### 👥 User Features
-- **User Registration & Login** - Secure account creation with password hashing
-- **Browse Pets** - View all available pets with filters (species, age, size, location)
-- **Pet Details** - Detailed information about each pet including photos, description, and health status
-- **Adoption Application** - Submit adoption requests with personalized messages
-- **User Profile** - Manage personal information and view adoption history
-- **Adoption Status Tracking** - Track the progress of adoption applications
+| Feature | Description |
+|---------|-------------|
+| **User Registration & Login** | Secure account creation with password hashing |
+| **Browse Pets** | View all available pets with filters (species, age, size, location) |
+| **Pet Details** | Detailed information including photos, description, and health status |
+| **Adoption Application** | Submit adoption requests with personalized messages |
+| **User Profile** | Manage personal information and view adoption history |
+| **Adoption Status Tracking** | Track the progress of adoption applications |
 
 ### 👑 Admin Features
-- **Admin Dashboard** - Overview of platform statistics
-- **Pet Management** - Add, edit, delete, and manage pet listings
-- **Adoption Management** - Approve, reject, or process adoption requests
-- **User Management** - View and manage user accounts
-- **Role Management** - Grant or revoke admin privileges
+| Feature | Description |
+|---------|-------------|
+| **Admin Dashboard** | Overview of platform statistics |
+| **Pet Management** | Add, edit, delete, and manage pet listings |
+| **Adoption Management** | Approve, reject, or process adoption requests |
+| **User Management** | View and manage user accounts |
+| **Role Management** | Grant or revoke admin privileges |
 
 ### 🔒 Security Features
-- Password hashing with bcrypt
-- Session-based authentication
-- Protected API routes
-- CSRF protection
-- Input validation and sanitization
+- ✅ Password hashing with bcrypt
+- ✅ Session-based authentication
+- ✅ Protected API routes
+- ✅ CSRF protection
+- ✅ Input validation and sanitization
 
 ### 🎨 UI/UX Features
-- Responsive design (mobile, tablet, desktop)
-- Modern, clean interface with Tailwind CSS
-- Real-time form validation
-- Loading states and error handling
-- Accessible components
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Modern, clean interface with Tailwind CSS
+- ✅ Real-time form validation
+- ✅ Loading states and error handling
+- ✅ Accessible components
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Backend
-| Technology | Description |
-|------------|-------------|
-| **Node.js** | JavaScript runtime environment |
-| **Express.js** | Web application framework |
-| **PostgreSQL** | Relational database |
-| **Drizzle ORM** | TypeScript ORM for database operations |
-| **Passport.js** | Authentication middleware |
-| **bcrypt** | Password hashing library |
-| **express-session** | Session management |
-
-### Frontend
-| Technology | Description |
-|------------|-------------|
-| **React** | UI library |
-| **Vite** | Build tool and development server |
-| **TypeScript** | Type-safe JavaScript |
-| **Tailwind CSS** | Utility-first CSS framework |
-| **TanStack Query** | Data fetching and caching |
-| **Wouter** | Lightweight routing |
-| **Lucide React** | Icon library |
-
-### Development Tools
-| Tool | Description |
-|------|-------------|
-| **Drizzle Kit** | Database schema management |
-| **tsx** | TypeScript execution for Node.js |
-| **ESLint** | Code linting |
-| **Prettier** | Code formatting |
+<table>
+  <tr>
+    <th width="33%">Backend</th>
+    <th width="33%">Frontend</th>
+    <th width="34%">Development Tools</th>
+  </tr>
+  <tr>
+    <td>
+      • Node.js<br>
+      • Express.js<br>
+      • PostgreSQL<br>
+      • Drizzle ORM<br>
+      • Passport.js<br>
+      • bcrypt<br>
+      • express-session
+    </td>
+    <td>
+      • React 18<br>
+      • TypeScript<br>
+      • Vite<br>
+      • Tailwind CSS<br>
+      • TanStack Query<br>
+      • Wouter<br>
+      • Lucide React
+    </td>
+    <td>
+      • Drizzle Kit<br>
+      • tsx<br>
+      • ESLint<br>
+      • Prettier<br>
+      • Git<br>
+      • GitHub Actions
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -108,42 +156,13 @@ streetpet/
 ├── client/ # Frontend application
 │ ├── src/
 │ │ ├── components/ # Reusable React components
-│ │ │ ├── Layout.tsx # Main layout wrapper
-│ │ │ ├── Navbar.tsx # Navigation bar
-│ │ │ ├── PetCard.tsx # Pet listing card
-│ │ │ ├── PetFilters.tsx # Filter sidebar
-│ │ │ ├── AdoptionForm.tsx # Adoption application form
-│ │ │ └── ProtectedRoute.tsx # Route protection wrapper
-│ │ │
 │ │ ├── pages/ # Page components
-│ │ │ ├── Home.tsx # Landing page with pet listings
-│ │ │ ├── Login.tsx # User login page
-│ │ │ ├── Register.tsx # User registration page
-│ │ │ ├── Profile.tsx # User profile and adoption history
-│ │ │ ├── PetDetails.tsx # Individual pet view
-│ │ │ └── Admin/ # Admin section
-│ │ │ ├── Dashboard.tsx # Admin dashboard
-│ │ │ ├── ManagePets.tsx # Pet management
-│ │ │ ├── ManageAdoptions.tsx # Adoption management
-│ │ │ └── ManageUsers.tsx # User management
-│ │ │
 │ │ ├── hooks/ # Custom React hooks
-│ │ │ ├── useAuth.ts # Authentication hook
-│ │ │ ├── usePets.ts # Pets data hook
-│ │ │ └── useAdoptions.ts # Adoptions data hook
-│ │ │
 │ │ ├── lib/ # Utilities and configurations
-│ │ │ ├── api.ts # API client configuration
-│ │ │ ├── constants.ts # Application constants
-│ │ │ └── utils.ts # Helper functions
-│ │ │
 │ │ ├── types/ # TypeScript type definitions
-│ │ │ └── index.ts # Shared types
-│ │ │
 │ │ ├── App.tsx # Main application component
 │ │ ├── main.tsx # Application entry point
-│ │ └── index.css # Global styles (Tailwind)
-│ │
+│ │ └── index.css # Global styles
 │ └── index.html # HTML template
 │
 ├── server/ # Backend application
@@ -154,7 +173,7 @@ streetpet/
 │ ├── storage.ts # Database operations interface
 │ └── vite.ts # Vite integration
 │
-├── shared/ # Shared code between frontend and backend
+├── shared/ # Shared code
 │ ├── schema.ts # Database schema definition
 │ └── routes.ts # API route definitions
 │
@@ -164,10 +183,7 @@ streetpet/
 ├── vite.config.ts # Vite configuration
 ├── package.json # Dependencies and scripts
 ├── .env.example # Environment variables example
-├── .gitignore # Git ignore rules
 └── README.md # Project documentation
-
-text
 
 ---
 
@@ -175,57 +191,67 @@ text
 
 Before you begin, ensure you have the following installed:
 
-- **Node.js** (version 18 or higher)
-  ```bash
-  node --version  # Should output v18.0.0 or higher
-npm (comes with Node.js)
+<div align="center">
 
-bash
-npm --version   # Should output 9.0.0 or higher
-PostgreSQL (version 14 or higher)
+| Requirement | Version | Verification Command |
+|-------------|---------|---------------------|
+| **Node.js** | 18+ | `node --version` |
+| **npm** | 9+ | `npm --version` |
+| **PostgreSQL** | 14+ | `psql --version` |
+| **Git** | 2.30+ | `git --version` |
 
-bash
-psql --version  # Should output psql (PostgreSQL) 14.0 or higher
-Git (for version control)
+</div>
 
-bash
-git --version   # Should output 2.30.0 or higher
-🚀 Installation
-Step 1: Clone the repository
-bash
+---
+
+## 🚀 Installation
+
+### Step 1: Clone the repository
+```bash
 git clone https://github.com/YOUR_USERNAME/streetpet.git
 cd streetpet
-Step 2: Install dependencies
-bash
+
+---
+
+## 📦 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+<div align="center">
+
+| Requirement | Version | Verification Command |
+|-------------|---------|---------------------|
+| **Node.js** | 18+ | `node --version` |
+| **npm** | 9+ | `npm --version` |
+| **PostgreSQL** | 14+ | `psql --version` |
+| **Git** | 2.30+ | `git --version` |
+
+</div>
+
+---
+
+## 🚀 Installation
+
+### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/StreetPet-App.git
+cd streetpet
+
+### Step 2: Install dependencies
+```bash
 npm install
-This will install all required dependencies for both the backend and frontend.
 
-Step 3: Create the database
-Open pgAdmin or use the command line to create a new database:
+###Step 3: Create the database
 
-Using pgAdmin:
-
-Open pgAdmin
-
-Right-click on "Databases" → "Create" → "Database"
-
-Name it streetpet_db
-
-Click "Save"
-
-Using command line:
-
-sql
 CREATE DATABASE streetpet_db;
-Step 4: Configure environment variables
-Copy the example environment file:
 
-bash
+### Step 4: Configure environment variables
+```bash
 cp .env.example .env
+
 Open the .env file and update it with your configuration:
 
-env
-# Database Configuration
 DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/streetpet_db
 
 # Server Configuration
@@ -236,60 +262,17 @@ NODE_ENV=development
 
 # Session Secret (for production, use a strong random string)
 SESSION_SECRET=your-session-secret-key
-⚠️ Important: Never commit the .env file to version control. It's already in .gitignore.
 
-Step 5: Initialize the database schema
-bash
+### Step 5: Initialize the database schema
+
+```bash
 npm run db:push
-This command will:
 
-Connect to your PostgreSQL database
+### Running the Application
 
-Create all necessary tables based on the schema
-
-Set up relationships and indexes
-
-🗄️ Database Setup
-Database Schema
-The application uses the following main tables:
-
-users - User accounts
-Column	Type	Description
-id	integer	Primary key, auto-increment
-username	text	Unique username
-password	text	Hashed password
-is_admin	boolean	Admin privileges flag
-email	text	User email address
-bio	text	User biography
-avatar_url	text	Profile picture URL
-pets - Pet listings
-Column	Type	Description
-id	integer	Primary key, auto-increment
-name	text	Pet name
-species	text	Dog, Cat, etc.
-breed	text	Breed information
-age	integer	Age in months/years
-size	text	Small, Medium, Large
-description	text	Detailed description
-image_url	text	Photo URL
-status	text	Available, Pending, Adopted
-adoptions - Adoption applications
-Column	Type	Description
-id	integer	Primary key, auto-increment
-user_id	integer	Foreign key to users
-pet_id	integer	Foreign key to pets
-status	text	Pending, Approved, Rejected
-message	text	Adoption application message
-created_at	timestamp	Application date
-▶️ Running the Application
-Development Mode
-Start the development server with hot reload:
-
-bash
+```bash
 npm run dev
-This will start both the backend and frontend servers:
 
-Frontend: http://localhost:3000
-
-API: http://localhost:3000/apii
-
+### Service	URL
+Frontend	http://localhost:3000
+API	http://localhost:3000/api
