@@ -20,7 +20,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [🌟 Overview](#-overview)
 - [✨ Features](#-features)
@@ -207,7 +207,8 @@ Before you begin, ensure you have the following installed:
 ## 🚀 Installation
 
 ### Step 1: Clone the repository
-```bash
+
+
 git clone https://github.com/YOUR_USERNAME/streetpet.git
 cd streetpet
 
@@ -217,7 +218,7 @@ cd streetpet
 
 Before you begin, ensure you have the following installed:
 
-<div align="center">
+
 
 | Requirement | Version | Verification Command |
 |-------------|---------|---------------------|
@@ -226,7 +227,7 @@ Before you begin, ensure you have the following installed:
 | **PostgreSQL** | 14+ | `psql --version` |
 | **Git** | 2.30+ | `git --version` |
 
-</div>
+
 
 ---
 
@@ -234,12 +235,12 @@ Before you begin, ensure you have the following installed:
 
 ### Step 1: Clone the repository
 
-```bash
+
 git clone https://github.com/YOUR_USERNAME/StreetPet-App.git
 cd streetpet
 
 ### Step 2: Install dependencies
-```bash
+
 npm install
 
 ###Step 3: Create the database
@@ -247,7 +248,7 @@ npm install
 CREATE DATABASE streetpet_db;
 
 ### Step 4: Configure environment variables
-```bash
+
 cp .env.example .env
 
 Open the .env file and update it with your configuration:
@@ -265,14 +266,16 @@ SESSION_SECRET=your-session-secret-key
 
 ### Step 5: Initialize the database schema
 
-```bash
+
 npm run db:push
 
 ### Running the Application
 
-```bash
+
+
 npm run dev
 
 ### Service	URL
+
 Frontend	http://localhost:3000
 API	http://localhost:3000/api
