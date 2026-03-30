@@ -18,27 +18,7 @@
   <img src="https://img.shields.io/badge/PostgreSQL-14+-blue?style=for-the-badge&logo=postgresql">
 </p>
 
----
 
-##  Table of Contents
-
-- [🌟 Overview](#-overview)
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [📦 Prerequisites](#-prerequisites)
-- [🚀 Installation](#-installation)
-- [🗄️ Database Setup](#️-database-setup)
-- [▶️ Running the Application](#️-running-the-application)
-- [🔌 API Documentation](#-api-documentation)
-- [👥 User Roles](#-user-roles)
-- [👑 Creating an Admin](#-creating-an-admin)
-- [🐛 Troubleshooting](#-troubleshooting)
-- [🚢 Deployment](#-deployment)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
----
 
 ## 🌟 Overview
 
@@ -150,57 +130,11 @@
 
 ---
 
-## 📁 Project Structure
-streetpet/
-│
-├── client/ # Frontend application
-│ ├── src/
-│ │ ├── components/ # Reusable React components
-│ │ ├── pages/ # Page components
-│ │ ├── hooks/ # Custom React hooks
-│ │ ├── lib/ # Utilities and configurations
-│ │ ├── types/ # TypeScript type definitions
-│ │ ├── App.tsx # Main application component
-│ │ ├── main.tsx # Application entry point
-│ │ └── index.css # Global styles
-│ └── index.html # HTML template
-│
-├── server/ # Backend application
-│ ├── auth.ts # Authentication configuration
-│ ├── db.ts # Database connection setup
-│ ├── index.ts # Server entry point
-│ ├── routes.ts # API route registration
-│ ├── storage.ts # Database operations interface
-│ └── vite.ts # Vite integration
-│
-├── shared/ # Shared code
-│ ├── schema.ts # Database schema definition
-│ └── routes.ts # API route definitions
-│
-├── drizzle.config.ts # Drizzle ORM configuration
-├── tailwind.config.js # Tailwind CSS configuration
-├── tsconfig.json # TypeScript configuration
-├── vite.config.ts # Vite configuration
-├── package.json # Dependencies and scripts
-├── .env.example # Environment variables example
-└── README.md # Project documentation
-
----
 
 ## 📦 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-<div align="center">
-
-| Requirement | Version | Verification Command |
-|-------------|---------|---------------------|
-| **Node.js** | 18+ | `node --version` |
-| **npm** | 9+ | `npm --version` |
-| **PostgreSQL** | 14+ | `psql --version` |
-| **Git** | 2.30+ | `git --version` |
-
-</div>
 
 ---
 
@@ -255,13 +189,13 @@ Open the .env file and update it with your configuration:
 
 DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/streetpet_db
 
-# Server Configuration
+### Server Configuration
 PORT=3000
 
-# Environment
+### Environment
 NODE_ENV=development
 
-# Session Secret (for production, use a strong random string)
+### Session Secret (for production, use a strong random string)
 SESSION_SECRET=your-session-secret-key
 
 ### Step 5: Initialize the database schema
