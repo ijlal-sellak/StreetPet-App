@@ -49,7 +49,7 @@
   </tr>
 </table>
 
-**Live Demo:** [https://streetpet-demo.example.com](https://streetpet-demo.example.com) *(Coming soon)*
+
 
 ---
 
@@ -65,7 +65,7 @@
 | **User Profile** | Manage personal information and view adoption history |
 | **Adoption Status Tracking** | Track the progress of adoption applications |
 
-### 👑 Admin Features
+###  Admin Features
 | Feature | Description |
 |---------|-------------|
 | **Admin Dashboard** | Overview of platform statistics |
@@ -74,23 +74,23 @@
 | **User Management** | View and manage user accounts |
 | **Role Management** | Grant or revoke admin privileges |
 
-### 🔒 Security Features
-- ✅ Password hashing with bcrypt
-- ✅ Session-based authentication
-- ✅ Protected API routes
-- ✅ CSRF protection
-- ✅ Input validation and sanitization
+###  Security Features
+-  Password hashing with bcrypt
+-  Session-based authentication
+-  Protected API routes
+-  CSRF protection
+-  Input validation and sanitization
 
-### 🎨 UI/UX Features
-- ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Modern, clean interface with Tailwind CSS
-- ✅ Real-time form validation
-- ✅ Loading states and error handling
-- ✅ Accessible components
+###  UI/UX Features
+-  Responsive design (mobile, tablet, desktop)
+-  Modern, clean interface with Tailwind CSS
+-  Real-time form validation
+-  Loading states and error handling
+-  Accessible components
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 <table>
   <tr>
@@ -143,7 +143,7 @@ Before you begin, ensure you have the following installed:
 ### Step 1: Clone the repository
 
 
-git clone https://github.com/YOUR_USERNAME/streetpet.git
+git clone https://github.com/ijlal-sellak/streetpet.git
 cd streetpet
 
 ---
@@ -189,13 +189,13 @@ Open the .env file and update it with your configuration:
 
 DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/streetpet_db
 
-### Server Configuration
+## Server Configuration
 PORT=3000
 
-### Environment
+## Environment
 NODE_ENV=development
 
-### Session Secret (for production, use a strong random string)
+## Session Secret (for production, use a strong random string)
 SESSION_SECRET=your-session-secret-key
 
 ### Step 5: Initialize the database schema
@@ -203,13 +203,13 @@ SESSION_SECRET=your-session-secret-key
 
 npm run db:push
 
-### Running the Application
+### Step 6:  Running the Application
 
 
 
 npm run dev
 
-### Service	URL
+## Service	URL
 
 Frontend	http://localhost:3000
-API	http://localhost:3000/api
+
