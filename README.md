@@ -170,7 +170,7 @@ Before you begin, ensure you have the following installed:
 ### Step 1: Clone the repository
 
 
-git clone https://github.com/YOUR_USERNAME/StreetPet-App.git
+git clone https://github.com/ijlal-sellak/StreetPet-App.git
 cd streetpet
 
 ### Step 2: Install dependencies
