@@ -21,6 +21,7 @@
 
 
 ## 🌟 Overview
+<img width="986" height="549" alt="image" src="https://github.com/user-attachments/assets/da576e5f-98d4-4b75-a5d2-08fcb47cb14c" />
 
 <p>
   <strong>StreetPet</strong> is a comprehensive pet adoption platform designed to help shelters and rescue organizations manage pet listings and streamline the adoption process. The platform provides separate interfaces for regular users and administrators, ensuring a smooth experience for both adopters and shelter staff.
